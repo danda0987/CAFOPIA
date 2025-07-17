@@ -100,16 +100,20 @@
         }
 
         .search-button {
-            width: 100%;
-            padding: 15px;
-            background-color: #d63384;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            margin-bottom: 20px;
+           width: 100%;
+  padding: 15px;
+  background-color: #f44336; /* rouge vif */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
         }
 
         .search-button:hover {
@@ -564,13 +568,10 @@
                     <span class="result-label">Date et lieu de naissance</span>
                     <span class="result-value">: <span id="dateNaissance"></span></span>
                 </div>
-                <div class="result-item">
-                    <span class="result-label">Date de composition</span>
-                    <span class="result-value date-composition">: <span id="dateComposition"></span></span>
-                </div>
+            
             </div>
 
-           <button class="search-button" onclick="location.reload()">🔍 Nouvelle Consultation
+           <button class="search-button" onclick="location.reload()"> Nouvelle Consultation
            </button>
 
         </div>
