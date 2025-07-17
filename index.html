@@ -561,7 +561,7 @@
                     <span class="result-value">: <span id="prenom"></span></span>
                 </div>
                 <div class="result-item">
-                    <span class="result-label">Date de naissance</span>
+                    <span class="result-label">Date et lieu de naissance</span>
                     <span class="result-value">: <span id="dateNaissance"></span></span>
                 </div>
                 <div class="result-item">
@@ -570,9 +570,9 @@
                 </div>
             </div>
 
-            <button class="print-button" onclick="printConvocation()">
-                Imprimer la convocation au test psycho (PDF)
-            </button>
+           <button class="search-button" onclick="location.reload()">🔍 Nouvelle Consultation
+           </button>
+
         </div>
     </div>
 
@@ -662,11 +662,11 @@
                 dateComposition: "Dimanche 29 juin 2025 - 07H30"
             },
             {
-                tableNumber: "25IA-742587",
-                codeInscription: "CIA25007486",
-                nom: "N’GUESSAN",
-                prenom: "AHOU RACHELLE",
-                dateNaissance: "05/12/1999",
+                tableNumber: "25IA-566947",
+                codeInscription: "CIA25017668",
+                nom: "KRA",
+                prenom: "KOMENAN MAXIME",
+                dateNaissance: "01/01/2001",
                 dateComposition: "MARDI 29 juillet 2025 - 07H30"
             }
         ];
@@ -686,7 +686,7 @@
             document.getElementById('nom').textContent = student.nom;
             document.getElementById('prenom').textContent = student.prenom;
             document.getElementById('dateNaissance').textContent = student.dateNaissance;
-            document.getElementById('dateComposition').textContent = student.dateComposition;
+            //document.getElementById('dateComposition').textContent = student.dateComposition;
             
             document.getElementById('congratulations').style.display = 'block';
             document.getElementById('notFound').style.display = 'none';
@@ -841,7 +841,7 @@
                     nom,
                     prenom,
                     dateNaissance,
-                    dateComposition
+                    //dateComposition
                 };
 
                 studentsDatabase.push(newStudent);
