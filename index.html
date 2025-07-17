@@ -100,20 +100,23 @@
         }
 
         .search-button {
-            width: 100%;
-            padding: 15px;
-            background-color: #d63384;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            margin-bottom: 20px;
-        }
+             width: 100%;
+  padding: 15px;
+  background-color: #f44336; /* rouge vif */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;        }
 
         .search-button:hover {
-            background-color: #b02a5b;
+            background-color: #d32f2f;
         }
 
         .back-link {
@@ -564,15 +567,15 @@
                     <span class="result-label">Date de naissance</span>
                     <span class="result-value">: <span id="dateNaissance"></span></span>
                 </div>
-                <div class="result-item">
-                    <span class="result-label">Date de composition</span>
-                    <span class="result-value date-composition">: <span id="dateComposition"></span></span>
-                </div>
+                
             </div>
 
-            <button class="print-button" onclick="printConvocation()">
-                Imprimer la convocation au test psycho (PDF)
-            </button>
+          <button class="search-button" onclick="location.reload()">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+    <path d="M10,2A8,8,0,1,0,18,10a8,8,0,0,0-8-8Zm0,14A6,6,0,1,1,16,10,6,6,0,0,1,10,16Zm11.71,4.29-4.4-4.4a1,1,0,0,0-1.42,1.42l4.4,4.4a1,1,0,1,0,1.42-1.42Z"/>
+  </svg>
+  Nouvelle Consultation
+</button>
         </div>
     </div>
 
@@ -612,10 +615,6 @@
                 <div class="admin-form-row">
                     <input type="text" id="adminNom" placeholder="Nom (ex: N'CHONON)" />
                     <input type="text" id="adminPrenom" placeholder="Prénom (ex: ASSI JONAS)" />
-                </div>
-                <div class="admin-form-row">
-                    <input type="text" id="adminDateNaiss" placeholder="Date de naissance (ex: 13/08/1997)" />
-                    <input type="text" id="adminDateComp" placeholder="Date de composition (ex: Dimanche 29 juin 2025 - 07H30)" />
                 </div>
                 <button class="admin-add-btn" onclick="addStudent()">Ajouter le candidat</button>
             </div>
@@ -686,7 +685,7 @@
             document.getElementById('nom').textContent = student.nom;
             document.getElementById('prenom').textContent = student.prenom;
             document.getElementById('dateNaissance').textContent = student.dateNaissance;
-            document.getElementById('dateComposition').textContent = student.dateComposition;
+            //document.getElementById('dateComposition').textContent = student.dateComposition;
             
             document.getElementById('congratulations').style.display = 'block';
             document.getElementById('notFound').style.display = 'none';
